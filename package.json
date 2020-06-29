@@ -1,0 +1,25 @@
+{
+    "name": "api-pet-store",
+    "version": "1.0.0",
+    "description": "backend pet store",
+    "main": "src/index.js",
+    "dependencies": {
+        "express": "^4.17.1",
+        "nodemon": "^2.0.4",
+        "sequelize": "^6.2.3"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.10.3",
+        "@babel/node": "^7.10.3",
+        "@babel/preset-env": "^7.10.3"
+    },
+    "scripts": {
+        "test": "node src/test.js",
+        "dev": "nodemon src/index.js --exec babel-node"
+    },
+    "keywords": [
+        "api"
+    ],
+    "author": "Jesuel Merudia",
+    "license": "ISC"
+}
