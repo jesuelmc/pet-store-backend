@@ -1,6 +1,8 @@
 import Sequelize from 'sequelize'
 import PetModel from "./pet";
 import UserModel from "./user";
+import CategoryModel from './category'
+import TagModel from './tag'
 
 const db = new Sequelize('pet-store', 'root', '', {
     host: 'localhost',
@@ -9,7 +11,8 @@ const db = new Sequelize('pet-store', 'root', '', {
 
 const Pet = PetModel('Pet', db)
 const User = UserModel('User', db)
-
+const Category = CategoryModel('Category', db)
+const Tag = TagModel('Tag', db)
 export { Pet, User }
 const syncDB = async() => {
     try {
