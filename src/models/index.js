@@ -1,5 +1,6 @@
 import Sequelize from 'sequelize'
 import PetModel from "./pet";
+import UserModel from "./user";
 
 const db = new Sequelize('pet-store', 'root', '', {
     host: 'localhost',
@@ -7,8 +8,9 @@ const db = new Sequelize('pet-store', 'root', '', {
 })
 
 const Pet = PetModel('Pet', db)
+const User = UserModel('User', db)
 
-export { Pet }
+export { Pet, User }
 const syncDB = async() => {
     try {
         await db.authenticate()
